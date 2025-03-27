@@ -13,18 +13,24 @@ Adam Rozwadowski ( 155 281 )
 ### :x: 2. Skrypt ładujący dane do bazy 
 a. Może pobierać dane ze strony – np. odpalany co jakiś czas/ładowanie z plików 
 csv, json. (deamon, cron table, itd) 
+
 b. Sprawdzanie poprawności danych. 
+
 c. Gromadzenie i archiwizacja przetworzonych/załadowanych danych do bazy. 
 
 ### :x: 3. Procedury, funkcje, wyzwalacze obsługujące bazę 
 a. Dodawanie, usuwanie, aktualizacja rekordów 
+
 b. Archiwizacja usuniętych danych 
+
 c. Logowanie informacji do tabeli 
+
 d. Obsługa wyjątków, również własne wyjątki 
+
 e. Procedury, funkcje z parametrami, możliwe parametry domyślne, 
 wykorzystanie funkcji okienkowych 
-f. 
-Sprawdzanie poprawności dodawanych danych (np. funkcja sprawdzająca 
+
+f. Sprawdzanie poprawności dodawanych danych (np. funkcja sprawdzająca 
 poprawność pesel) 
 
 ### :x: 4. Procedury, funkcje, wyzwalacze tworzące podsumowania 

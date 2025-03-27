@@ -6,7 +6,7 @@ Tomasz Piotrowski ( 162 556 )
 Adam Rozwadowski ( 155 281 )
 
 ## Etapy
-### [x] 1. Przygotowanie odpowiedniej struktury bazy danych na wybrany temat. 
+### \u2705 1. Przygotowanie odpowiedniej struktury bazy danych na wybrany temat. 
 - schemat: schemat_V3.png
 - tworzenie tabel: zsdb_travel_agency.sql
 

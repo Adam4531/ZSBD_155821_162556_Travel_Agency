@@ -3,7 +3,7 @@
 return [
     'oracle' => [
         'driver' => 'oracle',
-        'tns' => env('DB_TNS', ''),
+//        'tns' => env('DB_TNS', ''),
         'host' => env('DB_HOST', ''),
         'port' => env('DB_PORT', '1521'),
         'database' => env('DB_DATABASE', ''),

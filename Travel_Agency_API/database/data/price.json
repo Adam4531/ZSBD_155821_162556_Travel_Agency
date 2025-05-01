@@ -1,0 +1,9 @@
+{
+    "price": [
+        { "normal_price": 1500.00, "reduced_price": 1200.00, "is_active": true },
+        { "normal_price": 1999.99, "reduced_price": 1599.99, "is_active": true },
+        { "normal_price": 850.50,  "reduced_price": 700.00,  "is_active": true },
+        { "normal_price": 3100.00, "reduced_price": 2799.00, "is_active": true },
+        { "normal_price": 4200.75, "reduced_price": 3980.00, "is_active": false }
+    ]
+}

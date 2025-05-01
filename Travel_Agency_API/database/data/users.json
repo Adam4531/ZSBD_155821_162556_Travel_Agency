@@ -1,0 +1,44 @@
+{
+    "users": [
+        {
+            "first_name": "Anna",
+            "last_name": "Kowalska",
+            "phone_number": "+48123123123",
+            "email": "anna.k@example.com",
+            "password": "$2y$10$hash1",
+            "date_of_birth": "1990-05-12"
+        },
+        {
+            "first_name": "Piotr",
+            "last_name": "Nowak",
+            "phone_number": "+48123456789",
+            "email": "piotr.n@example.com",
+            "password": "$2y$10$hash2",
+            "date_of_birth": "1985-11-03"
+        },
+        {
+            "first_name": "Maria",
+            "last_name": "Zielińska",
+            "phone_number": "+48771112233",
+            "email": "maria.z@example.com",
+            "password": "$2y$10$hash3",
+            "date_of_birth": "1993-07-27"
+        },
+        {
+            "first_name": "Tomasz",
+            "last_name": "Wójcik",
+            "phone_number": "+48550123456",
+            "email": "tomasz.w@example.com",
+            "password": "$2y$10$hash4",
+            "date_of_birth": "1978-02-14"
+        },
+        {
+            "first_name": "Julia",
+            "last_name": "Mazur",
+            "phone_number": "+48660111222",
+            "email": "julia.m@example.com",
+            "password": "$2y$10$hash5",
+            "date_of_birth": "2000-12-30"
+        }
+    ]
+}

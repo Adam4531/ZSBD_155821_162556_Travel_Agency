@@ -1,0 +1,9 @@
+{
+    "types_of_tour": [
+        { "name_of_type": "Adventure", "is_active": true },
+        { "name_of_type": "Cultural",  "is_active": true },
+        { "name_of_type": "Beach",     "is_active": true },
+        { "name_of_type": "Hiking",    "is_active": true },
+        { "name_of_type": "Ski",       "is_active": false }
+    ]
+}

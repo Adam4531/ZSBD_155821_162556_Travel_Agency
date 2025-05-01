@@ -8,6 +8,7 @@ class TourHasReservation extends Model
 {
     protected $connection = 'oracle';
     protected $table = 'tour_has_reservations';
+    public $timestamps = false;
 
     protected $fillable = [
         'reservation_id',
@@ -25,5 +26,10 @@ class TourHasReservation extends Model
 
     public function reservation(){
         return $this->belongsTo(Reservation::class);
+    }
+
+    public static function getTableName()
+    {
+        return (new static)->getTable();
     }
 }

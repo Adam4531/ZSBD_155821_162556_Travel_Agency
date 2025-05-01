@@ -1,0 +1,74 @@
+{
+    "tours": [
+        {
+            "supervisor_id": 1,
+            "max_number_of_participants": 20,
+            "date_start": "2024-07-01",
+            "date_end": "2024-07-10",
+            "place_id": 101,
+            "type_of_tour_id": 1,
+            "price_id": 1,
+            "country": "Poland",
+            "region": "Tatra",
+            "city": "Zakopane",
+            "accommodation": "Hotel***",
+            "is_active": true
+        },
+        {
+            "supervisor_id": 2,
+            "max_number_of_participants": 15,
+            "date_start": "2024-08-15",
+            "date_end": "2024-08-25",
+            "place_id": 102,
+            "type_of_tour_id": 2,
+            "price_id": 2,
+            "country": "Italy",
+            "region": "Tuscany",
+            "city": "Florence",
+            "accommodation": "B&B",
+            "is_active": true
+        },
+        {
+            "supervisor_id": 1,
+            "max_number_of_participants": 30,
+            "date_start": "2024-09-05",
+            "date_end": "2024-09-14",
+            "place_id": 103,
+            "type_of_tour_id": 3,
+            "price_id": 3,
+            "country": "Spain",
+            "region": "Catalonia",
+            "city": "Barcelona",
+            "accommodation": "Resort",
+            "is_active": true
+        },
+        {
+            "supervisor_id": 3,
+            "max_number_of_participants": 10,
+            "date_start": "2024-10-01",
+            "date_end": "2024-10-08",
+            "place_id": 104,
+            "type_of_tour_id": 4,
+            "price_id": 4,
+            "country": "Austria",
+            "region": "Alps",
+            "city": "Innsbruck",
+            "accommodation": "Mountain Hut",
+            "is_active": true
+        },
+        {
+            "supervisor_id": 4,
+            "max_number_of_participants": 12,
+            "date_start": "2024-12-20",
+            "date_end": "2024-12-27",
+            "place_id": 105,
+            "type_of_tour_id": 5,
+            "price_id": 5,
+            "country": "Switzerland",
+            "region": "Bernese Oberland",
+            "city": "Grindelwald",
+            "accommodation": "Chalet",
+            "is_active": false
+        }
+    ]
+}

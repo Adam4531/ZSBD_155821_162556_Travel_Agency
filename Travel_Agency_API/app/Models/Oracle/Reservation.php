@@ -8,6 +8,9 @@ class Reservation extends Model
 {
     protected $connection = 'oracle';
     protected $table = 'reservations';
+    public $primaryKey = 'ID';
+    protected $sequence   = 'RESERVATIONS_SEQ';
+    public $timestamps = false;
 
     protected $fillable = [
         'user_id',
@@ -27,4 +30,10 @@ class Reservation extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+    public static function getTableName()
+    {
+        return (new static)->getTable();
+    }
+
 }

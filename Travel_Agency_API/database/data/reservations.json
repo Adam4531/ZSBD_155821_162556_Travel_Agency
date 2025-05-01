@@ -1,0 +1,44 @@
+{
+    "reservations": [
+        {
+            "user_id": 2,
+            "date_of_reservation": "2024-05-01",
+            "amount_of_children": 0,
+            "amount_of_adults": 2,
+            "is_confirmed": true,
+            "is_active": true
+        },
+        {
+            "user_id": 3,
+            "date_of_reservation": "2024-05-03",
+            "amount_of_children": 1,
+            "amount_of_adults": 2,
+            "is_confirmed": true,
+            "is_active": true
+        },
+        {
+            "user_id": 4,
+            "date_of_reservation": "2024-05-07",
+            "amount_of_children": 0,
+            "amount_of_adults": 1,
+            "is_confirmed": false,
+            "is_active": true
+        },
+        {
+            "user_id": 5,
+            "date_of_reservation": "2024-05-11",
+            "amount_of_children": 2,
+            "amount_of_adults": 2,
+            "is_confirmed": true,
+            "is_active": true
+        },
+        {
+            "user_id": 1,
+            "date_of_reservation": "2024-05-15",
+            "amount_of_children": 0,
+            "amount_of_adults": 4,
+            "is_confirmed": false,
+            "is_active": false
+        }
+    ]
+}

@@ -8,7 +8,9 @@ class Tour extends Model
 {
     protected $connection = 'oracle';
     protected $table = 'tours';
-
+    public $primaryKey = 'ID';
+    protected $sequence  = 'TOURS_SEQ';
+    public $timestamps = false;
     protected $fillable = [
         'supervisor_id',
         'max_number_of_participants',
@@ -39,6 +41,11 @@ class Tour extends Model
 
     public function price(){
         return $this->belongsTo(Price::class, 'price_id');
+    }
+
+    public static function getTableName()
+    {
+        return (new static)->getTable();
     }
 
 }

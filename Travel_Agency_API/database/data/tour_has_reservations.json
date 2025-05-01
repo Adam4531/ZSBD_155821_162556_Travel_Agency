@@ -1,0 +1,9 @@
+{
+    "tour_has_reservations": [
+        { "reservation_id": 1, "tour_id": 1, "is_price_reduced": false, "is_active": true },
+        { "reservation_id": 2, "tour_id": 2, "is_price_reduced": true,  "is_active": true },
+        { "reservation_id": 3, "tour_id": 3, "is_price_reduced": false, "is_active": true },
+        { "reservation_id": 4, "tour_id": 4, "is_price_reduced": true,  "is_active": true },
+        { "reservation_id": 5, "tour_id": 5, "is_price_reduced": false, "is_active": false }
+    ]
+}

@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Services\SyncDatabaseDataService;
+use App\Services\DatabaseService;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
@@ -13,8 +13,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->singleton(SyncDatabaseDataService::class, function (Application $app) {
-           return new SyncDatabaseDataService();
+        $this->app->singleton(DatabaseService::class, function (Application $app) {
+           return new DatabaseService();
         });
     }
 

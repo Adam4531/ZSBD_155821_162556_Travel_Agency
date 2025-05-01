@@ -14,6 +14,9 @@ class User extends Authenticatable
 
     protected $connection = 'oracle';
     protected $table = 'users';
+    public $primaryKey = 'ID';
+    protected $sequence = 'USERS_SEQ';
+    public $timestamps = false;
 
     protected $fillable = [
         'first_name',
@@ -39,5 +42,8 @@ class User extends Authenticatable
         ];
     }
 
-//    public function
+    public static function getTableName()
+    {
+        return (new static)->getTable();
+    }
 }

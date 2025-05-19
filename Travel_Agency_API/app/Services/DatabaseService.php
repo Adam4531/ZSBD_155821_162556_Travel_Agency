@@ -29,7 +29,7 @@ class DatabaseService
                 : $item;
 
             try{
-                $model::create($filteredItem);
+                $model::updateOrCreate([$uniqueKey => $uniqueKey], $filteredItem);
             } catch (\Exception $e){
                 Log::error('Error while populating data of model: '. $model .' with json file, error message: ' . $e->getMessage());
             }

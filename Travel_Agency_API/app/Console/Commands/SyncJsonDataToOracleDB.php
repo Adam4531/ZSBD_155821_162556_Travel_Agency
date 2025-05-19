@@ -35,28 +35,28 @@ class SyncJsonDataToOracleDB extends Command
     {
         $databaseService = new DatabaseService();
 
-//        $priceModel = Price::class;
-//        $databaseService->populateTableFromJsonFile($priceModel);
-//        $this->info('populating ' . $priceModel);
+        $priceModel = Price::class;
+        $databaseService->populateTableFromJsonFile($priceModel);
+        $this->info('populating ' . $priceModel);
 
         $tourTypeModel = TourType::class;
         $databaseService->populateTableFromJsonFile($tourTypeModel);
         $this->info('populating ' . $tourTypeModel);
-//
-//        $userModel = User::class;
-//        $databaseService->populateTableFromJsonFile($userModel);
-//        $this->info('populating ' . $userModel);
-//
-//        $reservationModel = Reservation::class;
-//        $databaseService->populateTableFromJsonFile($reservationModel);
-//        $this->info('populating ' . $reservationModel);
-//
-//        $tourModel = Tour::class;
-//        $databaseService->populateTableFromJsonFile($tourModel);
-//        $this->info('populating ' . $tourModel);
-//
-//        $tourHasReservationTable = TourHasReservation::class;
-//        $databaseService->populateTableFromJsonFile($tourHasReservationTable);
-//        $this->info('populating ' . $tourHasReservationTable);
+
+        $userModel = User::class;
+        $databaseService->populateTableFromJsonFile($userModel);
+        $this->info('populating ' . $userModel);
+
+        $reservationModel = Reservation::class;
+        $databaseService->populateTableFromJsonFile($reservationModel);
+        $this->info('populating ' . $reservationModel);
+
+        $tourModel = Tour::class;
+        $databaseService->populateTableFromJsonFile($tourModel);
+        $this->info('populating ' . $tourModel);
+
+        $tourHasReservationTable = TourHasReservation::class;
+        $databaseService->populateTableFromJsonFile($tourHasReservationTable);
+        $this->info('populating ' . $tourHasReservationTable);
     }
 }

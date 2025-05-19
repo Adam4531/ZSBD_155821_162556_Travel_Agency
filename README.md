@@ -10,13 +10,8 @@ Adam Rozwadowski ( 155 281 )
 - schemat: schemat_V3.png
 - tworzenie tabel: zsdb_travel_agency.sql
 
-### :x: 2. Skrypt ładujący dane do bazy 
-a. Może pobierać dane ze strony – np. odpalany co jakiś czas/ładowanie z plików 
-csv, json. (deamon, cron table, itd) 
-
-b. Sprawdzanie poprawności danych. 
-
-c. Gromadzenie i archiwizacja przetworzonych/załadowanych danych do bazy. 
+### :white_check_mark: 2. Skrypt ładujący dane do bazy 
+- Travel_Agency_API
 
 ### :x: 3. Procedury, funkcje, wyzwalacze obsługujące bazę 
 a. Dodawanie, usuwanie, aktualizacja rekordów 

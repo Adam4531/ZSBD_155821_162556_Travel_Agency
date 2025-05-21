@@ -1,4 +1,5 @@
--- inicjalizacja pakietów
+-- inicjalizacja pakietu
+
 CREATE OR REPLACE PACKAGE reservations_package IS
 
 PROCEDURE add_reservation(
@@ -100,7 +101,9 @@ PROCEDURE delete_reservation(
     p_id IN reservations.id%TYPE
 ) IS
 BEGIN
-    DELETE FROM reservations WHERE id=p_id;
+    UPDATE reservations
+       SET is_active = 0
+     WHERE id = p_id;
     
         IF SQL%ROWCOUNT=0 THEN
             RAISE_APPLICATION_ERROR(-20003, 'No reservaion found with id=' || p_id);
@@ -121,7 +124,9 @@ END reservations_package;
 
 --testy
 BEGIN
-  reservations_package.add_reservation(1, DATE '2011-05-01', 2,2);
+  reservations_package.add_reservation(4, DATE '2025-05-01', 2,2);
 END;
 /
+
+
 

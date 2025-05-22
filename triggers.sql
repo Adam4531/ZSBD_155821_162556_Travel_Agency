@@ -128,5 +128,24 @@ BEGIN
 END;
 /
 
+SELECT * FROM reservations;
 
+BEGIN
+  reservations_package.update_reservation(
+    p_id                   => 21,
+    p_user_id              => 1,
+    p_date_of_reservation  => DATE '2011-05-01',
+    p_amount_of_children   => 2,
+    p_amount_of_adults     => 2,
+    p_is_confirmed         => 1,
+    p_is_active            => 1
+  );
+END;
+/
 
+BEGIN
+  reservations_package.delete_reservation(
+    p_id => 22
+  );
+END;
+/

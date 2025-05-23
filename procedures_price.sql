@@ -89,7 +89,8 @@ BEGIN
 END;
 /
 
---SELECT * FROM price;
+SELECT * FROM price;
+SELECT * FROM price_archive;
 
 BEGIN
   price_package.update_price(
@@ -102,10 +103,11 @@ END;
 /
 
 --SELECT * FROM price;
+SELECT * FROM audit_log;
 
 BEGIN
   price_package.delete_price(
-    p_id => 1
+    p_id => 21
   );
 END;
 /

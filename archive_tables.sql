@@ -66,15 +66,88 @@ BEGIN
     id, supervisor_id, max_number_of_participants,
     date_start, date_end, place_id,
     type_of_tour_id, price_id,
-    country, region, city, accommodation, is_active,
-    archived_at, archived_by
+    country, region, city, accommodation, is_active
   ) VALUES (
     :OLD.id, :OLD.supervisor_id, :OLD.max_number_of_participants,
     :OLD.date_start, :OLD.date_end, :OLD.place_id,
     :OLD.type_of_tour_id, :OLD.price_id,
-    :OLD.country, :OLD.region, :OLD.city, :OLD.accommodation, :OLD.is_active,
-    SYSTIMESTAMP, SYS_CONTEXT('USERENV','SESSION_USER')
+    :OLD.country, :OLD.region, :OLD.city, :OLD.accommodation, :OLD.is_active
   );
 END;
 /  
 
+--types of tours
+CREATE TABLE types_of_tour_archive AS
+SELECT * FROM types_of_tour WHERE 1=0;
+
+
+ALTER TABLE types_of_tour_archive
+  ADD (
+    archived_at TIMESTAMP DEFAULT SYSTIMESTAMP,
+    archived_by VARCHAR2(30) DEFAULT SYS_CONTEXT('USERENV','SESSION_USER')
+  );
+  
+  
+DESCRIBE types_of_tour_archive;
+
+
+CREATE OR REPLACE TRIGGER trg_types_of_tour_archive
+  BEFORE UPDATE OF is_active ON types_of_tour
+  FOR EACH ROW
+  WHEN (OLD.is_active = 1 AND NEW.is_active = 0)
+BEGIN
+  INSERT INTO types_of_tour_archive (
+    id, name_of_type, is_active
+  ) VALUES (
+    :OLD.id, :OLD.name_of_type, :OLD.is_active
+  );
+END;
+/
+
+--price
+CREATE TABLE price_archive AS
+SELECT * FROM price WHERE 1=0;
+
+ALTER TABLE price_archive
+  ADD (
+    archived_at TIMESTAMP DEFAULT SYSTIMESTAMP,
+    archived_by VARCHAR2(30) DEFAULT SYS_CONTEXT('USERENV','SESSION_USER')
+  );
+
+CREATE OR REPLACE TRIGGER trg_price_archive
+  BEFORE UPDATE OF is_active ON price
+  FOR EACH ROW
+  WHEN (OLD.is_active = 1 AND NEW.is_active = 0)
+BEGIN
+  INSERT INTO price_archive (
+    id, normal_price, reduced_price, is_active
+  ) VALUES (
+    :OLD.id, :OLD.normal_price, :OLD.reduced_price, :OLD.is_active
+  );
+END;
+/
+
+--thr
+CREATE TABLE tour_has_reservations_archive AS
+SELECT * FROM tour_has_reservations WHERE 1=0;
+
+ALTER TABLE tour_has_reservations_archive
+  ADD (
+    archived_at TIMESTAMP DEFAULT SYSTIMESTAMP,
+    archived_by VARCHAR2(30) DEFAULT SYS_CONTEXT('USERENV','SESSION_USER')
+  );
+
+CREATE OR REPLACE TRIGGER trg_tour_has_reservations_archive
+  BEFORE UPDATE OF is_active ON tour_has_reservations
+  FOR EACH ROW
+  WHEN (OLD.is_active = 1 AND NEW.is_active = 0)
+BEGIN
+  INSERT INTO tour_has_reservations_archive (
+    reservation_id, tour_id,
+    is_price_reduced, is_active
+  ) VALUES (
+    :OLD.reservation_id, :OLD.tour_id,
+    :OLD.is_price_reduced, :OLD.is_active
+  );
+END;
+/

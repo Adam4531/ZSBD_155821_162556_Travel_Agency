@@ -86,7 +86,8 @@ BEGIN
 END;
 /
 
---SELECT * FROM types_of_tour;
+SELECT * FROM types_of_tour;
+SELECT * FROM types_of_tour_archive;
 
 
 BEGIN
@@ -95,6 +96,6 @@ END;
 /
 
 BEGIN
-    types_of_tour_package.delete_type(2);
+    types_of_tour_package.delete_type(3);
 END;
 /

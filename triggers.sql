@@ -145,7 +145,9 @@ END;
 
 BEGIN
   reservations_package.delete_reservation(
-    p_id => 22
+    p_id => 41
   );
 END;
 /
+
+SELECT * FROM reservations_archive;

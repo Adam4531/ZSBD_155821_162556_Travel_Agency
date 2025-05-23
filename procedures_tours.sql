@@ -197,6 +197,9 @@ END;
 
 
 BEGIN
-    tours_package.delete_tour(3);
+    tours_package.delete_tour(21);
 END;
 /
+
+SELECT * FROM tours;
+SELECT * FROM tours_archive;

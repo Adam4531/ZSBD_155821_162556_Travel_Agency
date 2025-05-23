@@ -97,7 +97,7 @@ SELECT * FROM tours;
 SELECT * FROM reservations;
 
 BEGIN
-    thr_package.add_thr(23,2);
+    thr_package.add_thr(24,2);
 END;
 /
 
@@ -107,9 +107,11 @@ END;
 /
 
 SELECT * FROM tour_has_reservations;
+SELECT * FROM tour_has_reservations_archive;
 
 
 BEGIN
-    thr_package.delete_thr(23, 2);
+    thr_package.delete_thr(41, 21);
 END;
 /
+

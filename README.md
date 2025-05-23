@@ -13,7 +13,7 @@ Adam Rozwadowski ( 155 281 )
 ### :white_check_mark: 2. Skrypt ładujący dane do bazy 
 - Travel_Agency_API
 
-### :x: 3. Procedury, funkcje, wyzwalacze obsługujące bazę 
+### :white_check_mark: 3. Procedury, funkcje, wyzwalacze obsługujące bazę 
 a. Dodawanie, usuwanie, aktualizacja rekordów 
 
 b. Archiwizacja usuniętych danych 
@@ -28,7 +28,7 @@ wykorzystanie funkcji okienkowych
 f. Sprawdzanie poprawności dodawanych danych (np. funkcja sprawdzająca 
 poprawność pesel) 
 
-### :x: 4. Procedury, funkcje, wyzwalacze tworzące podsumowania 
+### :white_check_mark: 4. Procedury, funkcje, wyzwalacze tworzące podsumowania 
 a. Zestawienia miesięczne, kwartalne, roczne, w zależności od różnych 
 parametrów – zapisywane w bazie danych (gotowe do wyświetlania na 
 wykresach)

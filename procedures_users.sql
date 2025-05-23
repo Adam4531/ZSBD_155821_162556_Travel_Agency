@@ -129,7 +129,7 @@ BEGIN
     p_first_name    => 'Jan',
     p_last_name     => 'Kowalski',
     p_phone_number  => '+48123123123',
-    p_email         => 'jan.k@example.com',
+    p_email         => 'jan.k2@example.com',
     p_password      => 'tajne',
     p_date_of_birth => DATE '1990-01-01'
   );
@@ -178,11 +178,12 @@ END;
 
 BEGIN
   users_package.delete_user(
-    p_id => 1
+    p_id => 22
   );
 END;
 /
 
 
---SELECT * FROM users
+--SELECT * FROM users;
+--SELECT * FROM users_archive;
 
